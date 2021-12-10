@@ -11,8 +11,10 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: 150px 240px 210px;
-  grid-template-rows: 110px 425px 375px;
+  height: 100%;
+  gap: 10px;
+  grid-template-columns: 150px 270px 1fr;
+  grid-template-rows: 0.7fr 2.9fr 2.4fr;
   grid-template-areas:
     "header header header"
     "bad bad bad-next"
@@ -20,12 +22,18 @@ body {
 }
 
 .header {
+  grid-area: header;
   background-color: black;
   color: #dde1d4;
-  padding-top: 42px;
-  padding-left: 10px;
-  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 15px 10px;
   font-weight: 550;
+}
+
+.header span:nth-child(2) {
+  margin-left: -90px;
 }
 
 .orange {
@@ -34,11 +42,11 @@ body {
 
 .bad {
   grid-area: bad;
-  margin-right: 10px;
   font-size: 180px;
   font-weight: 700;
-  padding-top: 190px;
-  letter-spacing: -6px;
+  display: flex;
+  align-items: flex-end;
+  line-height: 48mm;
 }
 
 .bad-next {
@@ -47,19 +55,18 @@ body {
 
 .religion {
   grid-area: religion;
-  margin-top: 10px;
   font-size: 180px;
   font-weight: 700;
-  line-height: 140px;
-  letter-spacing: -8px;
+  line-height: 40mm;
+  letter-spacing: -5px;
 }
 
 .religion > div {
   font-size: 30px;
   font-weight: 500;
   color: #dde1d4;
-  line-height: 35px;
-  padding-top: 70px;
+  line-height: 10mm;
+  padding-top: 50px;
   padding-left: 15px;
   letter-spacing: 0px;
 }
